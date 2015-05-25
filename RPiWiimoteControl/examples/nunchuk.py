@@ -2,12 +2,13 @@
 
 import time
 import cwiid
-import turtle
 import math
-c = 9.375
+import turtle
+turtle.setup(100, 100)
+c = 8
 
 screen = turtle.Screen()
-screen.colormode(255)
+#screen.colormode(255)
 t = turtle.Turtle()
 t.shape("blank")
 t.penup()
@@ -34,13 +35,13 @@ print('\nPress the PLUS button to disconnect the Wii Remote and end the applicat
 time.sleep(1)
 wm.rpt_mode = cwiid.RPT_BTN | cwiid.RPT_NUNCHUK
 
-def updateTurtleAngle(angle):
-    n.setx(10 * math.sqrt(2) * math.cos(math.radians(angle)))
-    n.sety(10 * math.sqrt(2) * math.sin(math.radians(angle)))
+#def updateTurtleAngle(angle):
+    #n.setx(10 * math.sqrt(2) * math.cos(math.radians(angle)))
+    #n.sety(10 * math.sqrt(2) * math.sin(math.radians(angle)))
 
 def updateTurtle():
-    n.setx(wm.state['nunchuk']['stick'][0]/c)
-    n.sety(wm.state['nunchuk']['stick'][1]/c)
+    n.setx(((wm.state['nunchuk']['stick'][0] - 128) / c) + 1)
+    n.sety((wm.state['nunchuk']['stick'][1] - 128) / c)
 
 def main():
 	time.sleep(0.05)
