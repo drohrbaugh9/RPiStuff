@@ -1,0 +1,73 @@
+#!/usr/bin/env python
+
+import time
+import cwiid
+import turtle
+import math
+c = 9.375
+
+screen = turtle.Screen()
+screen.colormode(255)
+t = turtle.Turtle()
+t.shape("blank")
+t.penup()
+t.sety(-18)
+t.pendown()
+
+h = 22.5
+for i in range(0, 360, 45):
+    t.setheading(h + i)
+    t.forward(14)
+
+n = turtle.Turtle()
+n.shape("circle")
+n.penup()
+n.speed(0)
+
+print('Press button 1 + 2 on your Wii Remote...\n')
+time.sleep(1)
+
+wm = cwiid.Wiimote()
+print('Wii Remote connected...    ...LED should be on...')
+wm.led = 1
+print('\nPress the PLUS button to disconnect the Wii Remote and end the application.\n')
+time.sleep(1)
+wm.rpt_mode = cwiid.RPT_BTN | cwiid.RPT_NUNCHUK
+
+def updateTurtleAngle(angle):
+    n.setx(10 * math.sqrt(2) * math.cos(math.radians(angle)))
+    n.sety(10 * math.sqrt(2) * math.sin(math.radians(angle)))
+
+def updateTurtle():
+    n.setx(wm.state['nunchuk']['stick'][0]/c)
+    n.sety(wm.state['nunchuk']['stick'][1]/c)
+
+def main():
+	time.sleep(0.05)
+	angle = 0
+	while True:
+                
+		# If button 2 is pressed...
+		if wm.state['buttons'] == 1:
+			print('Button 2 pressed')
+			
+		# If button 1 is pressed...
+		if wm.state['buttons'] == 2:
+			print('Button 1 pressed')
+			
+		# If + (Plus) is pressed...
+		if wm.state['buttons'] == 4096:
+			print('Keep holding + (Plus) to close Bluetooth connection...')
+			time.sleep(1)
+			if wm.state['buttons'] == 4096:
+				print('Closing Bluetooth connection. Good Bye!')
+				exit(wm)
+				
+		time.sleep(0.05)
+		print(wm.state['nunchuk']['buttons'])
+		print(wm.state['nunchuk']['stick'])
+		print(wm.state['nunchuk']['acc'])
+		updateTurtle()
+                         
+if __name__ == '__main__':
+    main()
