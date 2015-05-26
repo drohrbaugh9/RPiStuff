@@ -64,9 +64,9 @@ def main():
 				exit(wm)
 				
 		time.sleep(0.05)
-		print('buttons:       ' + wm.state['nunchuk']['buttons'])
-		print('stick:         ' + wm.state['nunchuk']['stick'])
-                print('accelerometer: ' + wm.state['nunchuk']['acc'])
+		print('buttons:       ' + str(wm.state['nunchuk']['buttons']))
+		print('stick:         ' + str(wm.state['nunchuk']['stick']))
+                print('accelerometer: ' + str(wm.state['nunchuk']['acc']))
 		updateTurtle()
                          
 if __name__ == '__main__':
