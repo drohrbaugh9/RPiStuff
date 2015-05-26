@@ -45,7 +45,6 @@ def updateTurtle():
 
 def main():
 	time.sleep(0.05)
-	angle = 0
 	while True:
                 
 		# If button 2 is pressed...
@@ -65,9 +64,9 @@ def main():
 				exit(wm)
 				
 		time.sleep(0.05)
-		print(wm.state['nunchuk']['buttons'])
-		print(wm.state['nunchuk']['stick'])
-		print(wm.state['nunchuk']['acc'])
+		print('buttons:       ' + wm.state['nunchuk']['buttons'])
+		print('stick:         ' + wm.state['nunchuk']['stick'])
+                print('accelerometer: ' + wm.state['nunchuk']['acc'])
 		updateTurtle()
                          
 if __name__ == '__main__':
