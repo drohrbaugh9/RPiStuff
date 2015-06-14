@@ -1,5 +1,12 @@
 #!/usr/bin/env python
 
+# Nunchuk stick values [0, 1]:
+#  middle:  [128, 128]
+#  up:      [128, 223]
+#  down:    [128, 29]
+#  right:   [227, 128]
+#  left:    [29, 128]
+
 import time
 import cwiid
 import math
@@ -34,10 +41,6 @@ wm.led = 1
 print('\nPress the PLUS button to disconnect the Wii Remote and end the application.\n')
 time.sleep(1)
 wm.rpt_mode = cwiid.RPT_BTN | cwiid.RPT_NUNCHUK
-
-#def updateTurtleAngle(angle):
-    #n.setx(10 * math.sqrt(2) * math.cos(math.radians(angle)))
-    #n.sety(10 * math.sqrt(2) * math.sin(math.radians(angle)))
 
 def updateTurtle():
     n.setx(((wm.state['nunchuk']['stick'][0] - 128) / c) + 1)
