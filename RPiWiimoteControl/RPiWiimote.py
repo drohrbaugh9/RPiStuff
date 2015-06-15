@@ -30,7 +30,7 @@ time.sleep(1)
 # print('Controls:\nbutton 2: Decrease altitude\n+ControlPad: Increase altitude\ntilt Forward: move Forward\ntilt Backward: move Backward\ntilt Right: move Right\ntilt Left: move Left\n'
 print('Controls:\nbutton 2: Down\n+ControlPad: Up\ntilt Forward: Forward\ntilt Backward: Backward\ntilt Right: Right\ntilt Left: Left\n')
 
-print('Battery: ' + int(100.0 * wm.state['battery'] / cwiid.BATTERY_MAX))
+print('Battery: ' + str(int(100.0 * wm.state['battery'] / cwiid.BATTERY_MAX)))
 
 wm.rpt_mode = cwiid.RPT_BTN | cwiid.RPT_ACC
 
