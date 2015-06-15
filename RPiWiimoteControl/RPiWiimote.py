@@ -43,32 +43,26 @@ def main():
 			# If button 2 is pressed...
 			if wm.state['buttons'] == 1:
 				print('moving Down...')
-				time.sleep(x)
 				
 			# If +ControlPad is pressed...
 			if wm.state['buttons'] == 256 or wm.state['buttons'] == 512 or wm.state['buttons'] == 1024 or wm.state['buttons'] == 1280 or wm.state['buttons'] == 1536 or wm.state['buttons'] == 2048 or wm.state['buttons'] == 2304 or wm.state['buttons'] == 2560:
 				print('moving Up...')
-				time.sleep(x)
 				
 			# If Wii Remote is tilted Forward...
 			if wm.state['acc'][0] > 140:
 				print('moving Forward')
-				time.sleep(x)
 				
 			# If Wii Remote is tilted Backward...
 			if wm.state['acc'][0] < 110:
 				print('moving Backward...')
-				time.sleep(x)
-				
-			# If Wii Remote is tilted Right...
-			if wm.state['acc'][1] > 140:
-				print('moving Right...')
-				time.sleep(x)
 				
 			# If Wii Remote is tilted Left...
-			if wm.state['acc'][1] < 110:
+			if wm.state['acc'][1] > 140:
 				print('moving Left...')
-				time.sleep(x)
+				
+			# If Wii Remote is tilted Right...
+			if wm.state['acc'][1] < 110:
+				print('moving Right...')
 
 		# If - (Minus) button is pressed...
 		if wm.state['buttons'] == 16:
@@ -83,7 +77,6 @@ def main():
 		# If Home button is pressed
 		if wm.state['buttons'] == 128:
 			print('Battery: ' + str(int(100.0 * wm.state['battery'] / cwiid.BATTERY_MAX)))
-			time.sleep(x)
 			
 		# If + (Plus) button is pressed...
 		if wm.state['buttons'] == 4096:
@@ -92,6 +85,7 @@ def main():
 			if wm.state['buttons'] == 4096:
 				print('Closing Bluetooth connection. Good Bye!')
 				exit(wm)
+		time.sleep(x)
 
 if __name__ == '__main__':
     main()
