@@ -82,7 +82,7 @@ def main():
 			
 		# If Home button is pressed
 		if wm.state['buttons'] == 128:
-			print('Battery: ' + int(100.0 * wm.state['battery'] / cwiid.BATTERY_MAX))
+			print('Battery: ' + str(int(100.0 * wm.state['battery'] / cwiid.BATTERY_MAX)))
 			time.sleep(x)
 			
 		# If + (Plus) button is pressed...
