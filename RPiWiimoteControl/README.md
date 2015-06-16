@@ -6,14 +6,14 @@ This code makes use of abstrakraft's [cwiid](http://abstrakraft.org/cwiid) libra
 
 This code uses these values for the buttons on the Wiimote:
 <p align="center">
-  <img src="https://raw.githubusercontent.com/drohrbaugh9/RPiWiimoteControl/master/examples/diagram.png" alt="Diagram of Wiimote buttons\n\nThis image is in the repository."/>
+  <img src="https://raw.githubusercontent.com/drohrbaugh9/RPiStuff/master/RPiWiimoteControl/examples/diagram.png" alt="Diagram of Wiimote buttons. This image is in the repository."/>
 </p>
 This code also uses these axes when reporting accelerometer data:
 <p align="center">
-  <img src="https://raw.githubusercontent.com/drohrbaugh9/RPiWiimoteControl/master/examples/wiimote_axes.png" alt="Diagram of Wiimote axes\n\nThis image is in the repository."/>
+  <img src="https://raw.githubusercontent.com/drohrbaugh9/RPiStuff/master/RPiWiimoteControl/examples/wiimote_axes.png" alt="Diagram of Wiimote axes. This image is in the repository."/>
 </p>
 
-This repository also includes [example code](https://github.com/drohrbaugh9/RPiWiimoteControl/tree/master/examples) for using the built-in [accelerometer](https://github.com/drohrbaugh9/RPiWiimoteControl/blob/master/examples/accelerometer.py) and the  [nunchuk](https://github.com/drohrbaugh9/RPiWiimoteControl/blob/master/examples/nunchuk.py), [MotionPlus](https://github.com/drohrbaugh9/RPiWiimoteControl/blob/master/examples/motionplus.py), and [Classic Controller](https://github.com/drohrbaugh9/RPiWiimoteControl/blob/master/examples/classicController.py) accessories with cwiid.
+This repository also includes [example code](https://github.com/drohrbaugh9/RPiStuff/tree/master/RPiWiimoteControl/examples) for using the built-in [accelerometer](https://github.com/drohrbaugh9/RPiStuff/blob/master/RPiWiimoteControl/examples/accelerometer.py) and the  [nunchuk](https://github.com/drohrbaugh9/RPiStuff/blob/master/RPiWiimoteControl/examples/nunchuk.py), [MotionPlus](https://github.com/drohrbaugh9/RPiStuff/blob/master/RPiWiimoteControl/examples/motionplus.py), and [Classic Controller](https://github.com/drohrbaugh9/RPiStuff/blob/master/RPiWiimoteControl/examples/classicController.py) accessories with cwiid.
 
 (Assuming you have a Raspberry Pi) Follow the instructions at Mr. Hensley's website [here](http://www.brianhensley.net/2012/08/wii-controller-raspberry-pi-python.html). After the step in which you install python-cwiid, you can just use RPiWiimote.py.
 
