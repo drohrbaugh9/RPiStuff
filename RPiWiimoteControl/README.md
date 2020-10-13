@@ -2,7 +2,7 @@ RPiWiimoteControl
 =================
 RPiWiimote.py is based off Brian Hensley's [wiimotetest.py](https://sites.google.com/site/brianhensleyfiles/wiimotetest.py). It is in a prototype stage right now, but I will use at some point.
 
-This code makes use of abstrakraft's [cwiid](http://abstrakraft.org/cwiid) library. It is available [here](https://github.com/abstrakraft/cwiid) on GitHub.
+This code makes use of abstrakraft's [cwiid](https://web.archive.org/web/20171130050907/http://abstrakraft.org/cwiid) library. It is available [here](https://github.com/abstrakraft/cwiid) on GitHub.
 
 This code uses these values for the buttons on the Wiimote:
 <p align="center">
@@ -17,4 +17,4 @@ This repository also includes [example code](https://github.com/drohrbaugh9/RPiS
 
 (Assuming you have a Raspberry Pi) Follow the instructions at Mr. Hensley's website [here](http://www.brianhensley.net/2012/08/wii-controller-raspberry-pi-python.html). After the step in which you install python-cwiid, you can just use RPiWiimote.py.
 
-A good example of all you can do with cwiid is [sguernion's](https://github.com/sguernion) [wiimote.py](https://github.com/sguernion/myPI/blob/07927754376d677f14e363a2549d1ecef65e56e5/serveur/python/wii/wiimote.py). This code does not, however, use the MotionPlus extension. For this, the [MotionPlus page](http://abstrakraft.org/cwiid/wiki/MotionPlus) on the cwiid website is helpful.
+A good example of all you can do with cwiid is [sguernion's](https://github.com/sguernion) [wiimote.py](https://github.com/sguernion/myPI/blob/07927754376d677f14e363a2549d1ecef65e56e5/serveur/python/wii/wiimote.py). This code does not, however, use the MotionPlus extension. For this, the [MotionPlus page](https://web.archive.org/web/20171117173403/http://abstrakraft.org/cwiid/wiki/MotionPlus) on the cwiid website is helpful.
