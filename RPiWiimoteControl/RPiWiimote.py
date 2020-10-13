@@ -25,7 +25,7 @@ print('|      _            (+)                     |')
 print('|   __| |__   ___             _      _      |')
 print('|  |__   __| (_A_)  ()       (1)    (2)     |')
 print('|     |_|                                   |')
-print('|()_________________(|)_____________________|\n')
+print('\'()_________________(|)_____________________\'\n')
 time.sleep(1)
 # print('Controls:\nbutton 2: Decrease altitude\n+ControlPad: Increase altitude\ntilt Forward: move Forward\ntilt Backward: move Backward\ntilt Right: move Right\ntilt Left: move Left\n'
 print('Controls:\nbutton 2: Down\n+ControlPad: Up\ntilt Forward: Forward\ntilt Backward: Backward\ntilt Right: Right\ntilt Left: Left\n')
