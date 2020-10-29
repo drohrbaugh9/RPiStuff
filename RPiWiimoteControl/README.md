@@ -8,6 +8,13 @@ This code uses these values for the buttons on the Wiimote:
 <p align="center">
   <img src="https://raw.githubusercontent.com/drohrbaugh9/RPiStuff/master/RPiWiimoteControl/examples/diagram.png" alt="Diagram of Wiimote buttons. This image is in the repository."/>
 </p>
+
+Here's a binary representation of the Wiimote button state:
+
+    0b1111110011111 (0x1F9F)
+      +UDRLH  -AB12
+       dpad
+
 This code also uses these axes when reporting accelerometer data:
 <p align="center">
   <img src="https://raw.githubusercontent.com/drohrbaugh9/RPiStuff/master/RPiWiimoteControl/examples/wiimote_axes.png" alt="Diagram of Wiimote axes. This image is in the repository."/>
