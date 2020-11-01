@@ -26,3 +26,12 @@ AB12 | 0x000F
 1  |__   __|  2
   5   |_|   6
        4
+
+if(<state> & 0x1000):
+  # + is pressed
+
+if(<state> & 0x0F00):
+  # dpad is pressed
+
+if(<state> & 0x1F9F):
+  # something is pressed
